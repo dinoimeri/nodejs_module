@@ -1,0 +1,22 @@
+body {
+  padding: 50px;
+  background-color: #4D9078;
+  color: #F2C14E;
+  font: 14px "Courier New";
+}
+
+a {
+  color: #F78154;
+}
+a:hover{
+  color: #B4436C;
+}
+
+button {
+  background-color: #8C1742;
+  color: #F1D28A;
+}
+
+h2 {
+  font-style: normal;
+}

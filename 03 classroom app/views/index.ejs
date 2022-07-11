@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CLASSROOM APP</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/javascripts/index.js"></script>
+  </head>
+  <body>
+    <a href="/create">Add a new student</a>
+    <h2>CLASSROOM</h2><h3>List of students</h3>
+    <table>
+     <% users.forEach(user => { %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.lastname %></td>
+        <td><a href="/user/<%= user.id %>/view">View</a></td>
+        <td><a href="/user/<%= user.id %>/edit">Edit</a></td>
+        <td><button onclick="deleteUser(`<%= user.id %>`);">Delete</button></td>
+      </tr>
+     <% }) %>
+    </table>
+  </body>
+</html>
