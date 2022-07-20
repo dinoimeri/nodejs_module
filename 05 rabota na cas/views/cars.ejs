@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cars List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <a href="/">Home</a>
+    <h2>List of Cars</h2>
+    <a href="/cars/create">Create new car</a>
+    <table>
+        <% cars.forEach(car => { %>
+        <tr>
+            <td>ID #<%= car._id %></td>
+            <td><%= car.car_name %></td>
+            <td><%= car.year %></td>
+            <td><%= car.in_stock %></td>
+            <td><a href="/cars/<%= car._id %>/view">View</a></td>
+            <td><a href="/cars/<%= car._id %>/edit">Edit</a></td>
+        </tr>
+      <% }) %>
+    </table>
+  </body>
+</html>
